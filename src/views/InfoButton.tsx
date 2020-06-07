@@ -10,6 +10,7 @@ interface IProps {
   helperContent?: string;
   backgroundColor: string;
   disabled?: boolean;
+  external?: boolean;
   link: string;
 }
 
@@ -49,8 +50,18 @@ const InfoButton: React.FC<IProps> = ({
   helperContent,
   link,
   disabled,
+  external = false,
 }) => {
-  return (
+  return external ? (
+    <MyButton>
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <Button disabled={disabled} backgroundColor={backgroundColor}>
+          {content}
+        </Button>
+      </a>
+      <span>{helperContent}</span>
+    </MyButton>
+  ) : (
     <MyButton>
       <Link to={link}>
         <Button disabled={disabled} backgroundColor={backgroundColor}>

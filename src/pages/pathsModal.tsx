@@ -18,7 +18,11 @@ const PathsModal: React.FC<RouteComponentProps> = () => {
         <Text textAlign={"center"} color={"white"} fontSize={[3, 5]}>
           أختر مسارك
         </Text>
-        <Modal list={nonTechList} title={"المجالات الغير التقنيه"} link={"#"} />
+        <Modal
+          list={nonTechList}
+          title={"المجالات الغير التقنيه"}
+          link={"/non-tech"}
+        />
         <Modal
           list={TechList}
           title={"المجالات التقنيه و البرمجه"}

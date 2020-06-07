@@ -1,0 +1,40 @@
+import React from "react";
+import { Box, Text, Flex } from "rebass";
+import { RouteComponentProps } from "@reach/router";
+import ReactPlayer from "react-player";
+import InfoButton from "../views/InfoButton";
+
+interface CourseraProps {}
+
+const Coursera: React.FC<RouteComponentProps> = () => {
+  return (
+    <Box backgroundColor={"primary"} height={"100vh"}>
+      <Text
+        fontSize={[2, 3, 4]}
+        color={"white"}
+        textAlign={"center"}
+        padding={[3]}
+      >
+        طريقه التسجيل علي كورسيرا{" "}
+      </Text>
+      <Flex justifyContent={"center"} width={[1]}>
+        <Box margin={[3]} width={[0.9, 0.9, 0.6]}>
+          <ReactPlayer
+            controls={true}
+            width={"100%"}
+            url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+          />
+        </Box>
+      </Flex>
+      <Flex justifyContent={"center"} width={[1]} marginTop={"15px"}>
+        <InfoButton
+          backgroundColor={"primdaryDark"}
+          content={"ادخل علي المنصه من هنا"}
+          link={"https://www.coursera.org/"}
+          external={true}
+        />
+      </Flex>
+    </Box>
+  );
+};
+export default Coursera;
