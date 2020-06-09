@@ -69,7 +69,7 @@ const NonTech: React.FC<RouteComponentProps> = () => {
             <InfoButton
               content={"إبدا من هنا"}
               backgroundColor={"primaryDark"}
-              link={"/platforms"}
+              link={"/learn/platforms"}
             />
           </Flex>
         </Box>

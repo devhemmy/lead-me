@@ -17,7 +17,7 @@ const HomePage: React.FC<RouteComponentProps> = () => {
           backgroundColor={"primaryDark"}
           content={"علمني"}
           helperContent={"لو لسه عاوز تبدا طريقك..."}
-          link={"/pathsModal"}
+          link={"/learn/pathsModal"}
         />
       </Flex>
       <Flex

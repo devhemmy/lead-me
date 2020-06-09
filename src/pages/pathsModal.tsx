@@ -21,12 +21,12 @@ const PathsModal: React.FC<RouteComponentProps> = () => {
         <Modal
           list={nonTechList}
           title={"المجالات الغير التقنيه"}
-          link={"/non-tech"}
+          link={"/learn/non-tech"}
         />
         <Modal
           list={TechList}
           title={"المجالات التقنيه و البرمجه"}
-          link={"#"}
+          link={"/learn/tech"}
         />
       </Box>
     </Flex>

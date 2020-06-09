@@ -9,6 +9,7 @@ interface IProps {
   title: string;
   list: string[];
   link: string;
+  external?: boolean;
 }
 
 const MyModal = styled(Box)`
@@ -32,8 +33,29 @@ const MyModal = styled(Box)`
   }
 `;
 
-const Modal: React.FC<IProps> = ({ title, link, list }) => {
-  return (
+const Modal: React.FC<IProps> = ({ title, link, list, external }) => {
+  return external ? (
+    <MyModal backgroundColor={"primaryDark"} width={[0.9, 0.9, 0.4]}>
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <Box>
+          <Text
+            textAlign={"center"}
+            fontSize={[1, 2]}
+            color={"grey"}
+            padding={[4]}
+            paddingBottom={[1]}
+          >
+            {title}
+          </Text>
+          <ul>
+            {list.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </Box>
+      </a>
+    </MyModal>
+  ) : (
     <MyModal backgroundColor={"primaryDark"} width={[0.9, 0.9, 0.4]}>
       <Link to={link}>
         <Box>
@@ -48,7 +70,7 @@ const Modal: React.FC<IProps> = ({ title, link, list }) => {
           </Text>
           <ul>
             {list.map((item) => (
-              <li>{item}</li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
         </Box>

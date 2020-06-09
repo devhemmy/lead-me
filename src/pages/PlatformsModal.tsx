@@ -28,8 +28,8 @@ const PathsModal: React.FC<RouteComponentProps> = () => {
         <Text textAlign={"center"} color={"white"} fontSize={[3, 5]}>
           أختر المنصه
         </Text>
-        <Modal list={Coursera} title={"كورسيرا"} link={"/coursera"} />
-        <Modal list={Edx} title={"إدكس"} link={"/edx"} />
+        <Modal list={Coursera} title={"كورسيرا"} link={"/learn/coursera"} />
+        <Modal list={Edx} title={"إدكس"} link={"/learn/edx"} />
       </Box>
     </Flex>
   );

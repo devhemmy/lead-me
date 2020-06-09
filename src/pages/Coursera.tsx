@@ -14,6 +14,7 @@ const Coursera: React.FC<RouteComponentProps> = () => {
         color={"white"}
         textAlign={"center"}
         padding={[3]}
+        paddingTop={6}
       >
         طريقه التسجيل علي كورسيرا{" "}
       </Text>
@@ -22,7 +23,7 @@ const Coursera: React.FC<RouteComponentProps> = () => {
           <ReactPlayer
             controls={true}
             width={"100%"}
-            url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+            url="https://www.youtube.com/watch?v=li5GP9WJmqI"
           />
         </Box>
       </Flex>

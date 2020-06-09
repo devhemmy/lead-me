@@ -6,17 +6,23 @@ import NonTech from "./pages/NonTech";
 import PlatformsModal from "./pages/PlatformsModal";
 import Coursera from "./pages/Coursera";
 import Edx from "./pages/Edx";
+import BackButton from "./views/BackButton";
+import Tech from "./pages/Tech";
 
 const App: React.FC = () => {
   return (
     <>
+      <Router primary={false}>
+        <BackButton path="/learn/*" />
+      </Router>
       <Router>
         <HomePage path="/" />
-        <PathsModal path="/pathsModal" />
-        <NonTech path="/non-tech" />
-        <PlatformsModal path="/platforms" />
-        <Coursera path="/coursera" />
-        <Edx path="/edx" />
+        <PathsModal path="/learn/pathsModal" />
+        <Tech path="/learn/tech" />
+        <NonTech path="/learn/non-tech" />
+        <PlatformsModal path="/learn/platforms" />
+        <Coursera path="/learn/coursera" />
+        <Edx path="/learn/edx" />
       </Router>
     </>
   );
